@@ -4,7 +4,6 @@ main :: IO ()
 main = putStrLn "Chapter 8: Recursion!"
 
 
-
 -- 8.2
 
 applyTimes :: (Eq a, Num a) => a -> (b -> b) -> b -> b
@@ -25,7 +24,6 @@ applyTimes n f b = f . applyTimes (n - 1) f $ b
 -- (+1) . (+1) . (+1) . (+1) . (+1) $ 5
 
 
-
 -- 8.6
 
 -- Review of types
@@ -41,7 +39,6 @@ applyTimes n f b = f . applyTimes (n - 1) f $ b
 
 -- 4.
 -- b) func "Hello" "World"
-
 
 
 -- Reviewing currying
@@ -89,7 +86,6 @@ exSix :: Bool
 exSix = cattyConny (flippy "Pugs" "are") "awesome" == "are mrow Pugs mrow awesome"
 
 
-
 -- Recursion
 
 -- dividedBy :: Integral a => a -> a -> (a, a)
@@ -108,7 +104,6 @@ exSix = cattyConny (flippy "Pugs" "are") "awesome" == "are mrow Pugs mrow awesom
 -- go 3 2 6
 -- go 1 2 7
 -- (7, 1)
-
 
 
 -- 2.
@@ -135,7 +130,6 @@ multiply x y = go 0 x' y'
     go acc left right = go (acc + left) left (right - 1)
 
 
-
 -- Fixing dividedBy
 
 dividedBy :: Integral a => a -> a -> Maybe (a, a)
@@ -147,7 +141,6 @@ dividedBy num denom = go num' denom' 0
     go n d count
      | n < d = Just (if flipSign num denom then (-count) else count, n)
      | otherwise = go (n - d) d (count + 1)
-
 
 
 -- McCarthy 91 function

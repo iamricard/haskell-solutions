@@ -1,7 +1,7 @@
 module Main where
 
 main :: IO ()
-main = putStrLn "Chapter 8: Recursion!"
+main = putStrLn "Chapter 9: Lists!"
 
 
 -- 9.5
